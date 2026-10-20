@@ -51,3 +51,46 @@ The cleaned dataset was exported as `swiggy_cleaned.csv`.
 - Explore relationships between price, cuisine, location, and ratings.
 - Define a suitable machine learning objective before model training.
 
+
+## Task 2: Machine Learning Model Training and Evaluation
+
+### Objective
+Train and compare at least two suitable machine learning models using the preprocessed Swiggy restaurant dataset. Evaluate their performance using appropriate regression metrics and explain the results.
+
+### Dataset
+- **Dataset:** Swiggy Restaurant Dataset
+- **Target Variable:** `rating`
+- **Selected Features:** Cuisine, number of ratings, average price, number of offers, area, pure vegetarian status, and location.
+- **Preprocessing:** Rows with missing target ratings were removed, categorical features were encoded using One-Hot Encoding, and the data was split into training and testing sets.
+
+### Machine Learning Models
+1. **Linear Regression** — Used as a baseline regression model.
+2. **Random Forest Regressor** — Used to capture potential nonlinear relationships between restaurant features and ratings.
+
+### Evaluation Metrics
+
+| Model | MAE | RMSE | R² Score |
+|---|---:|---:|---:|
+| Linear Regression | 0.3447 | 0.4725 | 0.0903 |
+| Random Forest | 0.3463 | 0.4757 | 0.0776 |
+
+### Results and Conclusion
+Linear Regression performed slightly better than the lightweight Random Forest model on the test dataset. It achieved lower MAE and RMSE values and a higher R² score.
+
+However, both models achieved relatively low R² scores, indicating that the selected features explain only a limited amount of the variation in restaurant ratings. Other factors may influence customer ratings.
+
+**Note:** Linear Regression was trained on the full training set, while Random Forest was trained on a smaller sample to reduce computational time. Therefore, this comparison has a limitation and should be interpreted cautiously.
+
+### Skills Learned
+- Machine Learning
+- Regression Modeling
+- Scikit-learn
+- Data Preprocessing
+- One-Hot Encoding
+- Model Evaluation
+- MAE, RMSE, and R² Metrics
+- Data Visualization
+- Model Comparison
+
+### Tools and Technologies
+Python, Pandas, NumPy, Matplotlib, and Scikit-learn.

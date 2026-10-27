@@ -153,3 +153,116 @@ This task provided practical experience in feature engineering, preprocessing pi
 
 ### Tools and Technologies
 Python, Pandas, NumPy, Matplotlib, and Scikit-learn.
+
+
+
+TASK 4 # Swiggy Restaurant Price Prediction | Machine Learning
+
+A Machine Learning regression project developed as part of **Task 4 of the Swynex Technologies Internship**. This project predicts restaurant average prices using restaurant-related features such as cuisine, ratings, offers, area, and location.
+
+## Project Overview
+
+The objective of this project is to build an end-to-end Machine Learning workflow covering data preparation, preprocessing, model training, evaluation, prediction, and model saving.
+
+## Dataset
+
+- **Dataset:** Swiggy Restaurant Dataset
+- **Total Records:** 139,321
+- **Input Features:** 8
+- **Target Variable:** `average_price`
+- **Training Samples:** 111,456
+- **Testing Samples:** 27,865
+
+### Features Used
+
+- Cuisine
+- Rating
+- Number of Ratings
+- Number of Offers
+- Offer Name
+- Area
+- Pure Vegetarian Status
+- Location
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Joblib
+- Jupyter Notebook
+
+## Methodology
+
+1. Loaded the cleaned Swiggy restaurant dataset.
+2. Selected relevant features and the target variable.
+3. Split the data into 80% training and 20% testing sets.
+4. Handled missing numerical values using median imputation.
+5. Handled missing categorical values using most-frequent imputation.
+6. Scaled numerical features and encoded categorical features.
+7. Trained a Random Forest Regression model.
+8. Evaluated the model using MAE, RMSE, and R² Score.
+9. Compared the model against a median prediction baseline.
+10. Saved and verified the trained model for future predictions.
+
+## Model Performance
+
+| Model | MAE (₹) | RMSE (₹) | R² Score |
+|---|---:|---:|---:|
+| Median Baseline | 89.7797 | 151.3517 | -0.0161 |
+| Random Forest Regressor | 86.8943 | 142.9538 | 0.0935 |
+
+The Random Forest model performed better than the median baseline on the test dataset. However, the R² score indicates limited predictive performance, leaving room for further improvement through feature engineering and hyperparameter tuning.
+
+## Sample Prediction
+
+The model generated a predicted average price of **₹265.40** for a sample restaurant input.
+
+*Note: Predictions are estimates and do not represent guaranteed restaurant prices.*
+
+## Installation
+
+Install the required dependencies:
+
+```bash
+pip install pandas numpy scikit-learn matplotlib joblib jupyter
+```
+
+## How to Run
+
+1. Clone or download this repository.
+2. Ensure the cleaned dataset is available locally.
+3. Update the dataset path in the Jupyter Notebook if required.
+4. Open the notebook using Jupyter.
+5. Execute the cells sequentially to train, evaluate, and use the model.
+
+## Project Structure
+
+```text
+swiggy-price-prediction/
+├── README.md
+├── swiggy_price_prediction.ipynb
+└── swiggy_price_model.pkl
+```
+
+The dataset should be placed locally at the path configured in the notebook. Include it in the repository only if its redistribution is permitted.
+
+## Future Improvements
+
+- Hyperparameter tuning for improved model performance.
+- Experimentation with alternative regression algorithms.
+- Feature engineering and analysis of prediction errors.
+- Further improvements in predictive accuracy.
+
+## Conclusion
+
+This project demonstrates the implementation of a complete Machine Learning regression pipeline for restaurant price prediction, from preprocessing and model training to evaluation, prediction, and model persistence.
+
+---
+
+**Internship:** Swynex Technologies  
+**Task:** Task 4 — Complete Machine Learning Project  
+**Domain:** Machine Learning | Regression
+
